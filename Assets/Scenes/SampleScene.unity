@@ -124,6 +124,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &163077216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7742829954764833906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &311331276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2674828574035603978, guid: d77c945f3090c2c409f0503f0851d7a5,
@@ -262,9 +274,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robots:
   - {fileID: 1797448721}
-  - {fileID: 7742829954764833907}
-  - {fileID: 1755868036}
-  - {fileID: 1052074917}
+  - {fileID: 163077216}
+  - {fileID: 1247591998}
+  - {fileID: 2093346168}
+  originalSources: 00000000
   soundManager: {fileID: 1232982327}
 --- !u!1 &519420028
 GameObject:
@@ -388,6 +401,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 353037398}
     m_Modifications:
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotView
+      value: 
+      objectReference: {fileID: 1052074919}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 458458013}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotMovement
+      value: 
+      objectReference: {fileID: 1052074917}
     - target: {fileID: 7742829955757557873, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_Name
@@ -2513,6 +2541,18 @@ Transform:
   m_Father: {fileID: 824614959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1247591998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1755868034}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1369110170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2863,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 353037398}
     m_Modifications:
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotView
+      value: 
+      objectReference: {fileID: 311331276}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 458458013}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotMovement
+      value: 
+      objectReference: {fileID: 1755868036}
     - target: {fileID: 7742829955757557873, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_Name
@@ -2934,8 +2989,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1797448719}
   - component: {fileID: 1797448718}
-  - component: {fileID: 1797448721}
   - component: {fileID: 1797448720}
+  - component: {fileID: 1797448721}
   m_Layer: 0
   m_Name: Wifi
   m_TagString: Untagged
@@ -3029,13 +3084,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1797448717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2c8277937f9c34bb4730f0948d6e73, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotRigidbody: {fileID: 0}
-  gameManager: {fileID: 0}
-  speed: 0
-  robotView: {fileID: 0}
+  robotMovement: {fileID: 0}
+  robotView: {fileID: 1797448720}
+  gameManager: {fileID: 458458013}
+  isSource: 1
 --- !u!114 &1888324560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2674828574035603978, guid: d77c945f3090c2c409f0503f0851d7a5,
@@ -3054,6 +3109,18 @@ BoxCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 1755868034}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2093346168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 883117952}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7742829954764833906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3061,6 +3128,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 353037398}
     m_Modifications:
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotView
+      value: 
+      objectReference: {fileID: 1888324560}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 458458013}
+    - target: {fileID: -1804201940121154611, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: robotMovement
+      value: 
+      objectReference: {fileID: 7742829954764833907}
     - target: {fileID: 7742829955757557873, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_Name

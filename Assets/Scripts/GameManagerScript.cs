@@ -8,10 +8,14 @@ public class GameManagerScript : MonoBehaviour
     //constants
     const int ROBOT_LAYER = 6;
 
-    public RobotMovement[] robots;
-    public SoundManager soundManager;
-    int activeRobotIndex = 1;
+    public RobotControl[] robots;
     public int[] originalSources = { 0 };
+
+    // sound control
+    public SoundManager soundManager;
+
+    // Private fields
+    int activeRobotIndex = 1;
 
     // Start is called before the first frame update
     void Start()

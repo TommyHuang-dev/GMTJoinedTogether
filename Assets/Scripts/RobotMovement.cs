@@ -9,14 +9,12 @@ public class RobotMovement : MonoBehaviour
     public GameManagerScript gameManager;
     public float speed;
 
-    int robotIndex;
     BoxCollider2D boxCollider;
     public RobotView robotView;
 
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        //robotView = GetComponent<RobotView>();
     }
 
     public void moveRobot(Vector2 movement)
@@ -24,21 +22,7 @@ public class RobotMovement : MonoBehaviour
         robotRigidbody.MovePosition(robotRigidbody.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    public void setIndex(int index)
-    {
-        robotIndex = index;
-    }
 
-    public int getIndex()
-    {
-        return robotIndex;
-    }
 
-    private void OnMouseDown()
-    {
-        gameManager.setActiveRobot(robotIndex);
-    }
-
-    public bool isInView(Transform otherTransform) { return robotView.isInView(otherTransform); }
 
 }
