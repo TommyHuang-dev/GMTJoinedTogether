@@ -11,13 +11,13 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        robots[activeRobotIndex].enableCollisions();
         robots[activeRobotIndex].moveRobot(movement);
     }
 }
