@@ -21,8 +21,12 @@ public class GameManagerScript : MonoBehaviour
         Physics2D.IgnoreLayerCollision(ROBOT_LAYER, ROBOT_LAYER);
     }
 
-    // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    private void FixedUpdate()
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         robots[activeRobotIndex].moveRobot(movement);

@@ -11,19 +11,6 @@ public class RobotMovement : MonoBehaviour
     public float speed;
 
     int robotIndex;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-
-    }
-
     public void moveRobot(Vector2 movement)
     {
         robotRigidbody.MovePosition(robotRigidbody.position + movement * speed * Time.fixedDeltaTime);
