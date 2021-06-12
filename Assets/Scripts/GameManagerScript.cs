@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     const int ROBOT_LAYER = 6;
 
     public RobotMovement[] robots;
+    public SoundManager soundManager;
     int activeRobotIndex = 0;
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class GameManagerScript : MonoBehaviour
         }
 
         Physics2D.IgnoreLayerCollision(ROBOT_LAYER, ROBOT_LAYER);
-
+        soundManager.startMusic();
     }
 
     void Update()
