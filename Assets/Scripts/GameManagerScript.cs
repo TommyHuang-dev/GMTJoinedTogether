@@ -5,12 +5,15 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     public RobotMovement[] robots;
-
     int activeRobotIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < robots.Length; ++i)
+        {
+            robots[i].setIndex(i);
+        }
     }
 
     // Update is called once per frame

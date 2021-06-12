@@ -8,6 +8,7 @@ public class RobotMovement : MonoBehaviour
     public Rigidbody2D robotRigidbody;
     public BoxCollider2D boxCollider;
     public float speed;
+    int robotIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,16 @@ public class RobotMovement : MonoBehaviour
     {
         // robotRigidbody.enabled = false;
         boxCollider.enabled = true;
+    }
+
+    public void setIndex(int index)
+    {
+        robotIndex = index;
+    }
+
+    public int getIndex()
+    {
+        return robotIndex;
     }
 
 }
