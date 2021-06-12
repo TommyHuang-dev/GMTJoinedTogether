@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    //constants
+    const int ROBOT_LAYER = 6;
+
     public RobotMovement[] robots;
     int activeRobotIndex = 0;
 
@@ -14,13 +17,19 @@ public class GameManagerScript : MonoBehaviour
         {
             robots[i].setIndex(i);
         }
+
+        Physics2D.IgnoreLayerCollision(ROBOT_LAYER, ROBOT_LAYER);
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        robots[activeRobotIndex].enableCollisions();
         robots[activeRobotIndex].moveRobot(movement);
+    }
+
+    public void setActiveRobot(int i)
+    {
+        activeRobotIndex = i;
     }
 }

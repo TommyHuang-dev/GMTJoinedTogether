@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7742829955757557876}
   - component: {fileID: 7742829955757557879}
   - component: {fileID: 7742829955757557877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Robot
   m_TagString: Robot
   m_Icon: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robotRigidbody: {fileID: 7742829955757557877}
   boxCollider: {fileID: 0}
+  gameManager: {fileID: 0}
   speed: 20
 --- !u!50 &7742829955757557877
 Rigidbody2D:
@@ -109,7 +110,7 @@ GameObject:
   - component: {fileID: 7742829956125362976}
   - component: {fileID: 7742829956125362979}
   - component: {fileID: 7742829956125362978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +204,7 @@ GameObject:
   - component: {fileID: 7742829956207570706}
   - component: {fileID: 7742829956207570704}
   - component: {fileID: 7742829956207570707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RobotMovement : MonoBehaviour
 {
-    // public Transform robotTransform;
     public Rigidbody2D robotRigidbody;
     public BoxCollider2D boxCollider;
+    public GameManagerScript gameManager;
     public float speed;
+
     int robotIndex;
+
     // Start is called before the first frame update
     void Start()
     {
-        disableCollisions();
+
     }
 
     // Update is called once per frame
@@ -26,17 +29,6 @@ public class RobotMovement : MonoBehaviour
         robotRigidbody.MovePosition(robotRigidbody.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    public void disableCollisions()
-    {
-        // robotRigidbody.enabled = false;
-        boxCollider.enabled = false;
-    }
-    public void enableCollisions()
-    {
-        // robotRigidbody.enabled = false;
-        boxCollider.enabled = true;
-    }
-
     public void setIndex(int index)
     {
         robotIndex = index;
@@ -45,6 +37,12 @@ public class RobotMovement : MonoBehaviour
     public int getIndex()
     {
         return robotIndex;
+    }
+
+    private void OnMouseDown()
+    {
+        gameManager.setActiveRobot(robotIndex);
+        Debug.Log(robotIndex);
     }
 
 }

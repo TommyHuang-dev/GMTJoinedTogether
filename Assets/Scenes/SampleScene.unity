@@ -2500,6 +2500,11 @@ PrefabInstance:
       propertyPath: boxCollider
       value: 
       objectReference: {fileID: 1962302828}
+    - target: {fileID: 7742829955757557879, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 458458013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77c945f3090c2c409f0503f0851d7a5, type: 3}
 --- !u!4 &1755868035 stripped
@@ -2604,6 +2609,11 @@ PrefabInstance:
       propertyPath: boxCollider
       value: 
       objectReference: {fileID: 1772656850}
+    - target: {fileID: 7742829955757557879, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 458458013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77c945f3090c2c409f0503f0851d7a5, type: 3}
 --- !u!114 &7742829954764833907 stripped
