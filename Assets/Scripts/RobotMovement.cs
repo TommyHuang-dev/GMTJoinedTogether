@@ -6,11 +6,19 @@ using UnityEngine;
 public class RobotMovement : MonoBehaviour
 {
     public Rigidbody2D robotRigidbody;
-    public BoxCollider2D boxCollider;
     public GameManagerScript gameManager;
     public float speed;
 
     int robotIndex;
+    BoxCollider2D boxCollider;
+    public RobotView robotView;
+
+    void Start()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+        //robotView = GetComponent<RobotView>();
+    }
+
     public void moveRobot(Vector2 movement)
     {
         robotRigidbody.MovePosition(robotRigidbody.position + movement * speed * Time.fixedDeltaTime);
@@ -29,7 +37,8 @@ public class RobotMovement : MonoBehaviour
     private void OnMouseDown()
     {
         gameManager.setActiveRobot(robotIndex);
-        Debug.Log(robotIndex);
     }
+
+    public bool isInView(Transform otherTransform) { return robotView.isInView(otherTransform); }
 
 }

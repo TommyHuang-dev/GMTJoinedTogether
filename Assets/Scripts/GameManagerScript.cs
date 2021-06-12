@@ -19,11 +19,11 @@ public class GameManagerScript : MonoBehaviour
         }
 
         Physics2D.IgnoreLayerCollision(ROBOT_LAYER, ROBOT_LAYER);
+
     }
 
     void Update()
     {
-
     }
 
     private void FixedUpdate()
@@ -34,6 +34,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void setActiveRobot(int i)
     {
-        activeRobotIndex = i;
+        if (robots[activeRobotIndex].isInView(robots[i].transform)) {
+            activeRobotIndex = i;
+        }
     }
 }
