@@ -19,10 +19,14 @@ public class GameManagerScript : MonoBehaviour
         }
 
         Physics2D.IgnoreLayerCollision(ROBOT_LAYER, ROBOT_LAYER);
+
     }
 
-    // Update is called once per frame
     void Update()
+    {
+    }
+
+    private void FixedUpdate()
     {
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         robots[activeRobotIndex].moveRobot(movement);
@@ -30,6 +34,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void setActiveRobot(int i)
     {
-        activeRobotIndex = i;
+        if (robots[activeRobotIndex].isInView(robots[i].transform)) {
+            activeRobotIndex = i;
+        }
     }
 }
