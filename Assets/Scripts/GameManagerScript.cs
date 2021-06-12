@@ -31,10 +31,12 @@ public class GameManagerScript : MonoBehaviour
 
     void Update()
     {
+        // Do we have to allocate each time ?
         List<int> repeaterQueue = new List<int>();
         List<int> inactiveList = new List<int>();
         List<int> activeList = new List<int>();
 
+        // Setup which robots are repeaters, active and inactive
         for (int i = 0; i < robots.Length; ++i)
         {
             if (originalSources.Contains(i))
@@ -48,6 +50,7 @@ public class GameManagerScript : MonoBehaviour
             }
         }
 
+        // Figure out which robots are active and inactive
         while (repeaterQueue.Count != 0)
         {
             int currentSource = repeaterQueue[0];
@@ -70,19 +73,15 @@ public class GameManagerScript : MonoBehaviour
         }
 
         // TODO: tell each robot what it's status is
-        string msg = "active: ";
         foreach (int active in activeList)
         {
-            msg += active;
+            robots[active].activate();
         }
-        Debug.Log(msg);
 
-        msg = "inactive: ";
         foreach (int inactive in inactiveList)
         {
-            msg += inactive;
+            robots[inactive].deactivate();
         }
-        Debug.Log(msg);
     }
 
     private void FixedUpdate()
