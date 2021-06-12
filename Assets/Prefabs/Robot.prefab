@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7742829955757557879}
   - component: {fileID: 7742829955757557877}
   - component: {fileID: -2674828574035603978}
+  - component: {fileID: -1804201940121154611}
   m_Layer: 6
   m_Name: Robot
   m_TagString: Robot
@@ -77,6 +78,7 @@ MonoBehaviour:
   robotRigidbody: {fileID: 7742829955757557877}
   gameManager: {fileID: 0}
   speed: 20
+  robotView: {fileID: 0}
 --- !u!50 &7742829955757557877
 Rigidbody2D:
   serializedVersion: 4
@@ -108,6 +110,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b31e8c21ddf1dde48af043195af18610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1804201940121154611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742829955757557873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7742829956125363004

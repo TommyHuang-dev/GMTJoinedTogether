@@ -20,7 +20,7 @@ public class RobotView : MonoBehaviour
         //Debug.Log(LayerMask.GetMask("Robots"));
         if (hit.collider == null)
         {
-            Debug.Log("Robot in line of sight");
+            // Debug.Log("Robot in line of sight");
             return true;
         }
         return false;

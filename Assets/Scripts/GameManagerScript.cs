@@ -10,8 +10,8 @@ public class GameManagerScript : MonoBehaviour
 
     public RobotMovement[] robots;
     public SoundManager soundManager;
-    int activeRobotIndex = 0;
-    int[] originalSources = { 1 };
+    int activeRobotIndex = 1;
+    public int[] originalSources = { 0 };
 
     // Start is called before the first frame update
     void Start()
@@ -49,28 +49,36 @@ public class GameManagerScript : MonoBehaviour
             int currentSource = repeaterQueue[0];
             repeaterQueue.RemoveAt(0);
 
+            List<int> plsDelete = new List<int>();
             foreach (int robotIndex in inactiveList)
             {
                 if (robots[currentSource].isInView(robots[robotIndex].transform))
                 {
                     repeaterQueue.Add(robotIndex);
                     activeList.Add(robotIndex);
-                    inactiveList.Remove(robotIndex);
+                    plsDelete.Add(robotIndex);
                 }
+            }
+            foreach (int robotIndex in plsDelete)
+            {
+                inactiveList.Remove(robotIndex);
             }
         }
 
         // TODO: tell each robot what it's status is
-        Debug.Log("Active:");
+        string msg = "active: ";
         foreach (int active in activeList)
         {
-            Debug.Log(active);
+            msg += active;
         }
-        Debug.Log("Inactive:");
+        Debug.Log(msg);
+
+        msg = "inactive: ";
         foreach (int inactive in inactiveList)
         {
-            Debug.Log(inactive);
+            msg += inactive;
         }
+        Debug.Log(msg);
     }
 
     private void FixedUpdate()
@@ -81,8 +89,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void setActiveRobot(int i)
     {
-        if (robots[activeRobotIndex].isInView(robots[i].transform)) {
+        //if (robots[activeRobotIndex].isInView(robots[i].transform)) {
             activeRobotIndex = i;
-        }
+        //}
     }
 }

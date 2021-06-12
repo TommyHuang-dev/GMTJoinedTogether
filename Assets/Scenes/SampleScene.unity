@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robots:
+  - {fileID: 1797448721}
   - {fileID: 7742829954764833907}
   - {fileID: 1755868036}
   - {fileID: 1052074917}
@@ -400,12 +401,12 @@ PrefabInstance:
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.787855
+      value: -10.32
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9032369
+      value: -8.63
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
@@ -2835,12 +2836,12 @@ PrefabInstance:
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.271106
+      value: -9.61
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4055157
+      value: 6.22
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
@@ -2933,6 +2934,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1797448719}
   - component: {fileID: 1797448718}
+  - component: {fileID: 1797448721}
+  - component: {fileID: 1797448720}
   m_Layer: 0
   m_Name: Wifi
   m_TagString: Untagged
@@ -3005,6 +3008,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1797448720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797448717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b31e8c21ddf1dde48af043195af18610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1797448721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797448717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2c8277937f9c34bb4730f0948d6e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robotRigidbody: {fileID: 0}
+  gameManager: {fileID: 0}
+  speed: 0
+  robotView: {fileID: 0}
 --- !u!114 &1888324560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2674828574035603978, guid: d77c945f3090c2c409f0503f0851d7a5,
@@ -3043,12 +3074,12 @@ PrefabInstance:
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3965993
+      value: -22.41
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.8355293
+      value: -2.12
       objectReference: {fileID: 0}
     - target: {fileID: 7742829955757557878, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
