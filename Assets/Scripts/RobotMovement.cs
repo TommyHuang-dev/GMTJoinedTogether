@@ -16,9 +16,12 @@ public class RobotMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+    }
+
+    public void moveRobot(Vector2 movement)
+    {
         robotRigidbody.MovePosition(robotRigidbody.position + movement * speed * Time.fixedDeltaTime);
-        //Debug.Log(movement);
     }
 
 }
