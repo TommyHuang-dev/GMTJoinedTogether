@@ -14,10 +14,10 @@ public class RobotMovement : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerScript>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        robotRigidbody = GetComponent<Rigidbody2D>();
-        robotView = GetComponent<RobotView>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
+        robotRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        robotView = gameObject.GetComponent<RobotView>();
     }
 
     public void moveRobot(Vector2 movement)

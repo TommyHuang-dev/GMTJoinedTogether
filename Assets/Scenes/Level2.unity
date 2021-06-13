@@ -368,6 +368,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &571546845 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7742829955757557876, guid: d77c945f3090c2c409f0503f0851d7a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 883117952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824614958
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +596,11 @@ PrefabInstance:
       propertyPath: robotView
       value: 
       objectReference: {fileID: 1052074919}
+    - target: {fileID: 7742829955757557879, guid: d77c945f3090c2c409f0503f0851d7a5,
+        type: 3}
+      propertyPath: boxCollider
+      value: 
+      objectReference: {fileID: 571546845}
     - target: {fileID: 7742829955757557879, guid: d77c945f3090c2c409f0503f0851d7a5,
         type: 3}
       propertyPath: gameManager
@@ -3614,10 +3625,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc55aa23bf42b541acaa15f73edc79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotMovement: {fileID: 0}
-  robotView: {fileID: 1797448720}
-  gameManager: {fileID: 458458013}
-  lineRenderer: {fileID: 1797448722}
   isSource: 1
 --- !u!120 &1797448722
 LineRenderer:
