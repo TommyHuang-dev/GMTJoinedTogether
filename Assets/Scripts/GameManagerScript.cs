@@ -32,6 +32,11 @@ public class GameManagerScript : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         // Do we have to allocate each time ?
         List<int> repeaterQueue = new List<int>();
         List<int> inactiveList = new List<int>();
@@ -116,6 +121,5 @@ public class GameManagerScript : MonoBehaviour
     public void restartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
     }
 }
