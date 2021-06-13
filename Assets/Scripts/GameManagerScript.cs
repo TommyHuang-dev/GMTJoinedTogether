@@ -64,6 +64,7 @@ public class GameManagerScript : MonoBehaviour
                     repeaterQueue.Add(robotIndex);
                     activeList.Add(robotIndex);
                     plsDelete.Add(robotIndex);
+                    drawRay(currentSource, robotIndex);
                 }
             }
             foreach (int robotIndex in plsDelete)
@@ -82,6 +83,13 @@ public class GameManagerScript : MonoBehaviour
         {
             robots[inactive].deactivate();
         }
+    }
+
+    void drawRay(int src, int target)
+    {
+        // Vector3 dir = robots[robot2].transform.position - robots[robot1].transform.position;
+        //Debug.DrawRay(robots[robot1].transform.position, dir, Color.white, 0.0f, false);
+        robots[target].setLineEndPoint(robots[src].transform.position);
     }
 
     private void FixedUpdate()
