@@ -112,4 +112,10 @@ public class GameManagerScript : MonoBehaviour
         if (SceneManager.sceneCountInBuildSettings == nextScene) { nextScene = 0; }
         SceneManager.LoadScene(nextScene);
     }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
 }
