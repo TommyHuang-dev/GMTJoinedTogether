@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RobotControl : MonoBehaviour
 {
-    public RobotMovement robotMovement;
-    public RobotView robotView;
-    public GameManagerScript gameManager;
-    public LineRenderer lineRenderer;
+    RobotMovement robotMovement;
+    RobotView robotView;
+    GameManagerScript gameManager;
+    LineRenderer lineRenderer;
 
     // If robot is source, leave robotMovement as null
     public bool isSource;
@@ -17,7 +17,11 @@ public class RobotControl : MonoBehaviour
 
     void Start()
     {
-        hideLine();    
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        robotMovement = gameObject.GetComponent<RobotMovement>();
+        robotView = gameObject.GetComponent<RobotView>();
+        lineRenderer = gameObject.GetComponent<LineRenderer>();
+        hideLine();
     }
 
     void Update()

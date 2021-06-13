@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Robot
   - Wall
+  - GameManager
   layers:
   - Default
   - TransparentFX
