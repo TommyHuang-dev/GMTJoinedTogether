@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GoalScript : MonoBehaviour
 {
+    GameManagerScript gameManager;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         
     }
 
@@ -18,7 +20,7 @@ public class GoalScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        gameManager.loadNextLevel();
     }
 
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -103,5 +104,12 @@ public class GameManagerScript : MonoBehaviour
         //if (robots[activeRobotIndex].isInView(robots[i].transform)) {
             activeRobotIndex = i;
         //}
+    }
+
+    public void loadNextLevel()
+    {
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        if (SceneManager.sceneCountInBuildSettings == nextScene) { nextScene = 0; }
+        SceneManager.LoadScene(nextScene);
     }
 }
